@@ -1,0 +1,212 @@
+/* 基本設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: calc(100% - 80px);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    margin-left: 30px;
+}
+
+header nav a:hover {
+    color: #007bff;
+}
+
+/* メインコンテンツ */
+main {
+    padding-top: 85px; /* ヘッダーの高さ分 */
+}
+
+/* ヒーローセクション */
+.hero {
+    height: 60vh;
+    background-image: url('C:/Users/ru004/Desktop/Gemini_Generated_Image_yadr32yadr32yadr.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* セクション共通 */
+main section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+main section:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+main section h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+main section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin: 8px auto 0;
+}
+
+
+/* 事業内容 */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    width: 30%;
+    max-width: 350px;
+    min-width: 280px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-top: 0;
+    color: #007bff;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* お問い合わせ */
+#contact .btn {
+    background-color: #28a745;
+}
+#contact .btn:hover {
+    background-color: #218838;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav li {
+        margin: 0 10px;
+    }
+
+    main {
+        padding-top: 120px; /* ヘッダーの高さ調整 */
+    }
+
+    .hero-text h2 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
