@@ -21,10 +21,11 @@ header {
     background-color: #fff;
     border-bottom: 1px solid #eee;
     position: fixed;
-    width: calc(100% - 80px);
+    width: 100%; /* 幅を100%に */
     top: 0;
     left: 0;
     z-index: 1000;
+    box-sizing: border-box; /* パディングを幅に含める */
 }
 
 header h1 {
@@ -74,6 +75,8 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 30px 50px;
     border-radius: 10px;
+    max-width: 90%; /* スマホでの見切れ防止 */
+    box-sizing: border-box;
 }
 
 .hero-text h2 {
@@ -91,6 +94,7 @@ main {
 main section {
     padding: 80px 40px;
     text-align: center;
+    box-sizing: border-box; /* パディングを幅に含める */
 }
 
 main section:nth-of-type(even) {
@@ -151,7 +155,7 @@ main section h2::after {
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 8px;
-    width: 30%;
+    width: calc(33% - 20px); /* 3列表示でギャップを考慮 */
     max-width: 350px;
     min-width: 280px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -159,6 +163,7 @@ main section h2::after {
     display: flex;
     flex-direction: column;
     overflow: hidden; /* 角丸を画像に適用するため */
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -268,22 +273,9 @@ main section h2::after {
     line-height: 1.5;
 }
 
-.message-body-text p {
+.message-body-paragraph { /* 新しく追加 */
     line-height: 1.8;
     margin-bottom: 1em;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .message-container {
-        flex-direction: column; /* スマホでは縦並び */
-        gap: 30px;
-    }
-
-    .profile-pic {
-        width: 100%; /* スマホでは幅いっぱいに */
-        height: auto;
-    }
 }
 
 /* お問い合わせ */
@@ -310,6 +302,7 @@ main section h2::after {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box; /* パディングを幅に含める */
 }
 
 .contact-form .btn {
@@ -335,7 +328,7 @@ footer {
     header {
         flex-direction: column;
         padding: 15px;
-        width: calc(100% - 30px);
+        width: 100%; /* 幅を100%に */
     }
 
     header h1 {
@@ -356,7 +349,7 @@ footer {
     }
     
     main section {
-        padding: 60px 20px;
+        padding: 60px 20px; /* 左右のパディングを調整 */
     }
 
     .hero-text h2 {
@@ -379,6 +372,55 @@ footer {
     }
 
     .card {
-        width: 80%;
+        width: 90%; /* スマホでは幅を広げる */
+        max-width: none; /* 最大幅を解除 */
+    }
+
+    .message-container {
+        flex-direction: column; /* スマホでは縦並び */
+        gap: 30px;
+    }
+
+    .profile-image-area {
+        width: 100%; /* スマホでは幅いっぱいに */
+        text-align: center; /* 画像を中央寄せ */
+    }
+
+    .profile-pic {
+        width: 80%; /* スマホでの画像の幅を調整 */
+        height: auto;
+        max-width: 300px; /* 画像の最大幅を設定 */
     }
 }
+
+@media (max-width: 480px) { /* さらに小さい画面向け */
+    header {
+        padding: 10px;
+    }
+
+    header h1 img {
+        height: 30px;
+    }
+
+    header nav li {
+        margin: 3px 8px;
+        font-size: 14px;
+    }
+
+    main section {
+        padding: 40px 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 95%;
+    }
+}
+
