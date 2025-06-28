@@ -188,7 +188,7 @@ main section h2::after {
     font-size: 22px;
     margin-top: 0;
     margin-bottom: 15px;
-    color: #007bff;
+    color: #333;
 }
 
 .card-content p {
@@ -350,6 +350,10 @@ footer {
     
     main section {
         padding: 60px 20px; /* 左右のパディングを調整 */
+    }
+
+    .hero {
+        height: 50vh; /* スマートフォンでの高さを調整 */
     }
 
     .hero-text h2 {
