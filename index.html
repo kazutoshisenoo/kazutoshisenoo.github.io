@@ -1,122 +1,183 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ6QF2CSTB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-YJ6QF2CSTB');
-</script>
-    
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>妹尾和俊一級建築士事務所</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="アイコン.jpg" type="image/jpeg">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <meta name="google-site-verification" content="PvO5D9vMihU0HeC77SjV42ODoYvHpuzPZvyLnrJweLI" />
 </head>
+
 <body>
-    <header>
-        <h1><a href="#"><img src="rogo.jpg" alt="妹尾和俊一級建築士事務所 ロゴ"></a></h1>
-        <nav>
-            <ul>
-                <li><a href="#about">事務所概要</a></li>
-                <li><a href="#services">事業内容</a></li>
-                <li><a href="#message">代表者メッセージ</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
+    <header id="header">
+        <div class="header-container">
+            <h1><a href="#"><img src="rogo.jpg" alt="妹尾和俊一級建築士事務所 ロゴ"></a></h1>
+            <button class="mobile-menu-btn" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#services">事業内容</a></li>
+                    <li><a href="#about">事務所概要</a></li>
+                    <li><a href="#message">代表者メッセージ</a></li>
+                    <li><a href="#contact" class="btn-nav">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-text">
-                <h2>安心と信頼の一級建築士事務所</h2>
-                <p>技術だけではない、あなたに寄り添うパートナー</p>
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-in-up">
+                <h2>安心と信頼の<br>一級建築士事務所</h2>
+                <p>技術だけではない、<br class="sp-only">あなたに寄り添うパートナー</p>
+                <a href="#contact" class="btn-hero">ご相談はこちら</a>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <h2>事業内容</h2>
-            <div class="service-cards">
-                <div class="card">
-                    <img src="inspection_top.jpg" alt="ホームインスペクション" class="card-image">
-                    <div class="card-content">
-                        <h3>ホームインスペクション事業</h3>
-                        <p>専門家が住宅の健康状態を診断。安心して暮らせる住まいをサポートします。</p>
-                        <a href="https://inspection-partners.com/" target="_blank" class="btn">詳しく見る</a>
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">事業内容</h2>
+                <div class="service-cards">
+                    <div class="card fade-in-up delay-100">
+                        <div class="card-image-wrapper">
+                            <img src="inspection_top.jpg" alt="ホームインスペクション" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>ホームインスペクション事業</h3>
+                            <p>専門家が住宅の健康状態を診断。安心して暮らせる住まいをサポートします。</p>
+                            <a href="https://inspection-partners.com/" target="_blank" class="btn-text">詳しく見る <span
+                                    class="arrow">→</span></a>
+                        </div>
+                    </div>
+                    <div class="card coming-soon fade-in-up delay-200">
+                        <div class="card-image-wrapper">
+                            <img src="design.jpg" alt="設計事業" class="card-image">
+                            <div class="badge">Coming Soon</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>設計事業</h3>
+                            <p>個人住宅から商業施設まで、お客様の夢を叶えるオーダーメイドの建築設計。</p>
+                        </div>
+                    </div>
+                    <div class="card fade-in-up delay-300">
+                        <div class="card-image-wrapper">
+                            <img src="template_top.jpg" alt="設計図テンプレート販売" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>設計図テンプレート販売事業</h3>
+                            <p>プロ品質の設計図を手軽に。理想の建物づくりの第一歩を応援します。</p>
+                            <a href="https://sk-architect.net/" target="_blank" class="btn-text">詳しく見る <span
+                                    class="arrow">→</span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="card coming-soon">
-                    <img src="design.jpg" alt="設計事業" class="card-image">
-                    <div class="card-content">
-                        <h3>設計事業</h3>
-                        <p>個人住宅から商業施設まで、お客様の夢を叶えるオーダーメイドの建築設計。</p>
-                        <span class="btn-disabled">Coming Soon</span>
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding bg-gray">
+            <div class="container">
+                <h2 class="section-title fade-in">事務所概要</h2>
+                <div class="about-content fade-in-up">
+                    <dl class="about-list">
+                        <div class="about-item">
+                            <dt>名称</dt>
+                            <dd>妹尾和俊一級建築士事務所<br><span class="sub-text">（東京都知事登録　第66412号）</span></dd>
+                        </div>
+                        <div class="about-item">
+                            <dt>代表</dt>
+                            <dd>妹尾和俊<br><span class="sub-text">（一級建築士、管理建築士）</span></dd>
+                        </div>
+                        <div class="about-item">
+                            <dt>所在地</dt>
+                            <dd>東京都港区南青山3-1-36青山丸竹ビル6F</dd>
+                        </div>
+                        <div class="about-item">
+                            <dt>連絡先</dt>
+                            <dd><a href="tel:050-8893-6091">050-8893-6091</a></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="message" class="message section-padding">
+            <div class="container">
+                <h2 class="section-title fade-in">代表者メッセージ</h2>
+                <div class="message-container">
+                    <div class="profile-image-area fade-in-right">
+                        <img src="DSC00239.JPG" alt="代表者 妹尾和俊" class="profile-pic">
+                    </div>
+                    <div class="message-content-area fade-in-left">
+                        <h3>代表 妹尾 和俊</h3>
+                        <ul class="profile-career-list">
+                            <li>広島県出身 / 大阪大学大学院卒</li>
+                            <li>東急㈱で施主として渋谷再開発、新路線計画、木造建築、リフォームまで幅広く担当</li>
+                            <li>一級建築士 / 投資家</li>
+                            <li>趣味：サーフィン、バイク、ワイン、旅行、ジム、サウナなど / 大の犬好き</li>
+                        </ul>
+                        <div class="message-body">
+                            <p>私が前職で痛感したのは、「建築士事務所が技術の話ばかりで、ほとんど施主のサポートをしてくれない」ということでした。</p>
+                            <p>これでは一般の初心者の方は、疑問や不安、もどかしい気持ちでいっぱいなのではないか。<br>一級建築士としての経験を活かし、技術だけじゃなくて、本当の意味で施主様をサポートできないか。
+                            </p>
+                            <p>そのような思いから、この事務所を立ち上げました。</p>
+                            <p>当事務所に所属するのは全員が経験豊富な一級建築士です。<br>技術はもちろんですが、何よりもお客様の気持ちに寄り添ってサポートをすることを強みにしています。</p>
+                            <p>不安や疑問がたくさんで、どこから手をつけていいかもわからない、<br>そんなお客様の夢を実現する力になれたら非常に嬉しいです。</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="template_top.jpg" alt="設計図テンプレート販売" class="card-image">
-                    <div class="card-content">
-                        <h3>設計図テンプレート販売事業</h3>
-                        <p>プロ品質の設計図を手軽に。理想の建物づくりの第一歩を応援します。</p>
-                        <a href="https://sk-architect.net/" target="_blank" class="btn">詳しく見る</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-padding bg-dark text-white">
+            <div class="container">
+                <div class="contact-wrapper fade-in-up">
+                    <h2 class="section-title text-white">お問い合わせ</h2>
+                    <p class="contact-desc">ご相談、ご依頼はこちらのフォームからお気軽にご連絡ください。</p>
+                    <div class="form-container">
+                        <form id="contactForm" class="custom-form">
+                            <div class="form-group">
+                                <label for="name">お名前 <span class="required">必須</span></label>
+                                <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">メールアドレス <span class="required">必須</span></label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">件名 <span class="required">必須</span></label>
+                                <input type="text" id="subject" name="subject" required placeholder="ご相談内容について">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+                                <textarea id="message" name="message" rows="6" required
+                                    placeholder="お問い合わせ内容をご記入ください"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">送信する</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>事務所概要</h2>
-            <div class="about-content">
-                <dl>
-                    <dt>名称</dt>
-                    <dd>妹尾和俊一級建築士事務所（東京都知事登録　第66412号）</dd>
-                    <dt>代表</dt>
-                    <dd>妹尾和俊（一級建築士、管理建築士）</dd>
-                    <dt>所在地</dt>
-                    <dd>東京都港区南青山3-1-36青山丸竹ビル6F</dd>
-                    <dt>連絡先</dt>
-                    <dd>050-8893-6091</dd>
-                </dl>
-            </div>
-        </section>
-
-        <section id="message" class="message">
-            <h2>代表者メッセージ</h2>
-            <div class="message-container">
-                <div class="profile-image-area">
-                    <img src="DSC00239.JPG" alt="代表者 妹尾和俊" class="profile-pic">
-                </div>
-                <div class="message-content-area">
-                    <h3>代表 妹尾 和俊</h3>
-                    <ul class="profile-career-list">
-                        <li>広島県出身 / 大阪大学大学院卒 /<br>東急㈱で施主として渋谷再開発、新路線計画、木造建築、リフォームまで幅広く担当</li>
-                        <li>一級建築士 / 投資家 / 趣味はサーフィン、バイク、ワイン、旅行、ジム、サウナなど /<br>大の犬好き</li>
-                    </ul>
-                    <p class="message-body-paragraph">私がこれまでの経験で痛感したのは、「建築士事務所がほとんど施主のサポートをしてくれない」ということでした。</p>
-                    <p class="message-body-paragraph">これでは一般の初心者の方は、疑問や不安、もどかしい気持ちでいっぱいなのではないか。「一級建築士としての経験を活かし、技術だけじゃなくて、本当の意味で施主様をサポートできないか」</p>
-                    <p class="message-body-paragraph">そのような思いから、この事務所を立ち上げました。</p>
-                    <p class="message-body-paragraph">当事務所に所属するのは全員が経験豊富な一級建築士です。<br>でも私たちは、技術だけではなく、お客様の気持ちに寄り添ってサポートをすることを強みにしています。</p>
-                    <p class="message-body-paragraph">不安や疑問がたくさんで、どこから手をつけていいかもわからない、そんなお客様の夢を実現する力になれたら非常に嬉しいです。</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>お問い合わせ</h2>
-            <p>ご相談、ご依頼はこちらのフォームからお気軽にご連絡ください。</p>
-            <a href="https://form.run/@ru--CKygQvqh1zbn97vPOIj2" target="_blank" class="btn">お問い合わせフォームへ</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 妹尾和俊一級建築士事務所. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 妹尾和俊一級建築士事務所. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
