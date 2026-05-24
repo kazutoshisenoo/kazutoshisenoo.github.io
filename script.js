@@ -1,3 +1,12 @@
+// ==========================================
+// お問い合わせ自動返信機能の設定（EmailJSを使用する場合）
+// ==========================================
+// 無料で自動返信メールを送信したい場合は、EmailJS（https://www.emailjs.com/）に登録し、
+// 以下の設定値を入力してください。設定されていない場合は、Formspreeへの送信のみが行われます。
+const EMAILJS_PUBLIC_KEY = '';  // 例: 'user_xxxxxxxxxxxxxx'
+const EMAILJS_SERVICE_ID = '';  // 例: 'service_xxxxxxx'
+const EMAILJS_TEMPLATE_ID = ''; // 例: 'template_xxxxxxx'
+
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -85,6 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
             })
                 .then(response => {
                     if (response.ok) {
+                        // EmailJSによる自動返信メール送信（設定されている場合）
+                        if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY && EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID) {
+                            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                                name: formData.get("name"),
+                                email: formData.get("email"),
+                                subject: formData.get("subject"),
+                                message: formData.get("message")
+                            }, EMAILJS_PUBLIC_KEY)
+                            .then(() => {
+                                console.log('Auto-reply sent successfully.');
+                            })
+                            .catch((err) => {
+                                console.error('Auto-reply failed to send:', err);
+                            });
+                        }
+
                         alert('お問い合わせありがとうございます。\nメッセージが送信されました。');
                         contactForm.reset();
                     } else {
